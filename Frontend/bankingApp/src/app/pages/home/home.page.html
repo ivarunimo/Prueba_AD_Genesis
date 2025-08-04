@@ -1,0 +1,122 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-avatar class="user-avatar ion-margin-start">
+        <img src="/assets/icon/profile-user.png" alt="User Avatar">
+      </ion-avatar>
+    </ion-buttons>
+    <ion-title>
+      <div class="title-container">
+        <div class="greeting">Hola,</div>
+        <div class="user-name">{{fullName}}</div>
+      </div>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button class="notification-button">
+        <ion-icon slot="icon-only" name="notifications"></ion-icon>
+        <ion-badge color="danger" class="notification-badge">3</ion-badge>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card class="balance-card">
+    <ion-card-header>
+      <ion-card-title (click)="navigateToBalance()" class="balance-amount">¡Bienvenido a tu banca en línea!</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <div *ngIf="debitCard.id == 0">
+    <ion-card class="balance-card">
+    <ion-card-header>
+      <ion-card-title class="Notification">No Posees Tarjetas Todavía</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+    
+  </div>
+  <div *ngIf="debitCard.id != 0" class="credit-card">
+    <div class="card-header">
+      <h3>{{fullName}}</h3>
+      <span>Banco Platinium</span>
+    </div>
+    <div class="card-body">
+      <div class="card-number">{{debitCard.number.slice(0, 4) + ' ' + '****' + ' ' + '****' + ' ' + debitCard.number.slice(12, 16)}}</div>
+      <div class="card-balance">Q {{balance.toFixed(2)}}</div>
+    </div>
+    <div class="card-footer">
+      <span>{{debitCard.type}}</span>
+    </div>
+  </div>
+
+  <div class="quick-actions">
+    <h4 class="section-title">Acciones rápidas</h4>
+    <ion-grid>
+      <ion-row class="ion-text-center">
+        <ion-col size="6">
+          
+          <ion-button expand="block" fill="clear" routerLink="/accounts-tabs" class="menu-button">
+
+            <div class="menu-item">
+              <ion-icon name="wallet-outline" color="primary"></ion-icon>
+              <ion-label>Cuentas</ion-label>
+            </div>
+          </ion-button>
+
+        </ion-col>
+        <ion-col size="6">
+          <ion-button expand="block" fill="clear" routerLink="/accounts-tabs/cards" class="menu-button">
+            <div class="menu-item">
+              <ion-icon name="card-outline" color="primary"></ion-icon>
+              <ion-label>Tarjetas</ion-label>
+            </div>
+          </ion-button>
+        </ion-col>
+        <ion-col size="6">
+          <ion-button expand="block" fill="clear" routerLink="/transfer" class="menu-button">
+            <div class="menu-item">
+              <ion-icon name="swap-horizontal-outline" color="primary"></ion-icon>
+              <ion-label>Transferir</ion-label>
+            </div>
+          </ion-button>
+        </ion-col>
+        <ion-col size="6">
+          <ion-button expand="block" fill="clear" routerLink="/transactions" class="menu-button">
+            <div class="menu-item">
+              <ion-icon name="reader-outline" color="primary"></ion-icon>
+              <ion-label>Movimientos</ion-label>
+            </div>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div class="recent-transactions">
+    <div class="section-header">
+      <h4 class="section-title">Transacciones recientes</h4>
+      <ion-button fill="clear" size="small" routerLink="/transactions">Ver todas</ion-button>
+    </div>
+    <ion-list lines="full">
+
+      <ion-item *ngFor="let movimiento of movimientos">
+        <ion-avatar slot="start">
+          <div class="transaction-icon deposit">
+            <ion-icon *ngIf="movimiento.kind == 1" name="swap-horizontal-outline"></ion-icon>
+            <ion-icon *ngIf="movimiento.kind == 2" name="arrow-up-outline"></ion-icon>
+            <ion-icon *ngIf="movimiento.kind == 3" name="arrow-down-outline"></ion-icon>
+            <ion-icon *ngIf="movimiento.kind == 4" name="wallet-outline"></ion-icon>
+            <ion-icon *ngIf="movimiento.kind == 5" name="cart-outline"></ion-icon>
+          </div>
+        </ion-avatar>
+        <ion-label>
+          <h3>{{movimiento.description}}</h3>
+          <p>{{movimiento.fecha | date: 'shortDate'}}</p>
+        </ion-label>
+        <ion-note slot="end" color="{{movimiento.type == 1 ? 'danger' : 'success'}}">
+          {{movimiento.type == 1 ? '-Q.' + movimiento.amount.toFixed(2) : '+Q.' + movimiento.amount.toFixed(2)}}
+        </ion-note>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

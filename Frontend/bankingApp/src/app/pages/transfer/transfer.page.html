@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Transferencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="transferForm" class="login-form" (ngSubmit)="onSubmitTransfer()">
+    <div class="cuenta-label">Cuenta de origen - Saldo: {{ amountOrigin | currency:'Q':true }}</div>
+    <ion-item>
+      <ion-select formControlName="sourceAccount" placeholder="Seleccionar cuenta">
+        <ion-select-option *ngFor="let account of availableAccounts" [value]="account.id">
+         {{ account.account_name }} - {{ account.number }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <div class="cuenta-label">Cuenta de destino - Saldo: {{ amountDestination | currency:'Q':true }}</div>
+    <ion-item>
+      <ion-select formControlName="destinationAccount" placeholder="Seleccionar cuenta">
+        <ion-select-option *ngFor="let account of availableAccounts" [value]="account.id">
+          {{ account.account_name }} - {{ account.number }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <div class="cuenta-label">Monto a transferir</div>
+    <ion-item>
+      <ion-input formControlName="amount" type="number" placeholder="0.00"> 
+        <ion-text slot="start" class="currency-symbol">Q</ion-text>
+      </ion-input>
+    </ion-item>
+
+    <div class="cuenta-label">Descripción (opcional)</div>
+    <ion-item>
+      <ion-input formControlName="description" placeholder="Ingrese descripción"></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" expand="block" [disabled]="transferForm.invalid">
+      TRANSFERIR
+    </ion-button>
+  </form>
+</ion-content>

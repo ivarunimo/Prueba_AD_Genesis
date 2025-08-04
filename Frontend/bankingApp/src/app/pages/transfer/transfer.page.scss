@@ -1,0 +1,159 @@
+ion-content {
+  --background: white;
+  color: #000000;
+}
+
+/* Color morado para la barra superior como en la imagen */
+ion-toolbar {
+  --background: linear-gradient(135deg, #4a148c, #8e24aa);
+  --color: white;
+}
+
+/* Estilo para segmentos/tabs como en la imagen */
+ion-segment {
+  background-color: white;
+  
+  ion-segment-button {
+    --color: #666;
+    --color-checked: #6A1B9A;
+    --indicator-color: #6A1B9A;
+  }
+}
+
+ion-item {
+  --background: white;
+  --padding-start: 16px;
+  --border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+  ion-label {
+    color: #000000;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+}
+
+/* Asegurar que absolutamente TODOS los textos sean negros */
+ion-content * {
+  color: #000000;
+}
+
+/* Excepciones para elementos que necesitan otro color */
+ion-button {
+  --color: white;
+}
+
+/* Botones con el mismo color morado de la barra */
+ion-button {
+  --background: linear-gradient(135deg, #4a148c, #8e24aa);
+  --color: white;
+  margin-top: 32px;
+  height: 54px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  --box-shadow: 0 4px 16px rgba(246, 244, 247, 0.25);
+  --color: white;
+  
+  ion-icon {
+    margin-right: 8px;
+  }
+}
+
+.transfer-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.amount-container {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 24px;
+  border: 1px solid #eaeaea;
+  
+  ion-input {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000000; /* Cambiado a negro */
+    text-align: center;
+  }
+  
+  .currency-symbol {
+    font-size: 20px;
+    font-weight: 600;
+    color: #020202;
+  }
+}
+
+/* Corregido: faltaba el punto al inicio del selector */
+.source-destination-labels {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  
+  .label {
+    font-size: 12px;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+/* Específicamente para los textos de cuenta origen y destino */
+ion-label[position="stacked"],
+ion-label[position="floating"] {
+  color: #000000 !important;
+  font-weight: 500;
+}
+
+/* Asegurar que los placeholders también sean negros o gris oscuro */
+::placeholder {
+  color: #555555 !important;
+  opacity: 1;
+}
+
+/* Para el texto dentro de los inputs y selects */
+ion-select::part(text),
+ion-select::part(placeholder),
+ion-input::part(input) {
+  color: #000000;
+}
+
+/* Específicamente para los campos de formulario */
+ion-item {
+  --highlight-color: #6A1B9A; /* Color morado para los highlights */
+  
+  ion-label, ion-select, ion-input, ion-textarea {
+    --color: #000000;
+    color: #000000;
+    
+    &::part(text),
+    &::part(placeholder) {
+      color: #000000;
+    }
+  }
+}
+
+/* Para los selectores */
+ion-select-option {
+  color: #000000;
+}
+
+/* Para los placeholders */
+::placeholder {
+  color: #000000 !important;
+}
+:-ms-input-placeholder {
+  color: #000000 !important;
+}
+::-ms-input-placeholder {
+  color: #000000 !important;
+}
+
+/* Para asegurar que las etiquetas específicas de origen y destino sean negras */
+.cuenta-label {
+  color: #000000;
+  font-weight: 500;
+}

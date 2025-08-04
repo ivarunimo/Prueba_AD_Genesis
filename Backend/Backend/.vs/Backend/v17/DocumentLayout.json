@@ -1,0 +1,184 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "B:\\Proyectos\\Prueba_t\u00E9cnica_angular\\Backend\\Backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E68CE821-6A7E-4294-B528-C06F7D9EA9D8}|Backend.csproj|b:\\proyectos\\prueba_t\u00E9cnica_angular\\backend\\backend\\controllers\\creacionejemplos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E68CE821-6A7E-4294-B528-C06F7D9EA9D8}|Backend.csproj|solutionrelative:controllers\\creacionejemplos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32CE44C-CDD1-44C3-BB3B-957627EF571C}|..\\ContextoDB\\ContextoDB.csproj|b:\\proyectos\\prueba_t\u00E9cnica_angular\\backend\\contextodb\\tables\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32CE44C-CDD1-44C3-BB3B-957627EF571C}|..\\ContextoDB\\ContextoDB.csproj|b:\\proyectos\\prueba_t\u00E9cnica_angular\\backend\\contextodb\\tables\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32CE44C-CDD1-44C3-BB3B-957627EF571C}|..\\ContextoDB\\ContextoDB.csproj|b:\\proyectos\\prueba_t\u00E9cnica_angular\\backend\\contextodb\\tables\\debitcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E68CE821-6A7E-4294-B528-C06F7D9EA9D8}|Backend.csproj|b:\\proyectos\\prueba_t\u00E9cnica_angular\\backend\\backend\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E68CE821-6A7E-4294-B528-C06F7D9EA9D8}|Backend.csproj|solutionrelative:controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|B:\\Proyectos\\Prueba_t\u00E9cnica_angular\\Backend\\ContextoDB\\Migrations\\20250804030149_Base_Datos_Final.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E68CE821-6A7E-4294-B528-C06F7D9EA9D8}|Backend.csproj|b:\\proyectos\\prueba_t\u00E9cnica_angular\\backend\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E68CE821-6A7E-4294-B528-C06F7D9EA9D8}|Backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32CE44C-CDD1-44C3-BB3B-957627EF571C}|..\\ContextoDB\\ContextoDB.csproj|b:\\proyectos\\prueba_t\u00E9cnica_angular\\backend\\contextodb\\tables\\transfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E68CE821-6A7E-4294-B528-C06F7D9EA9D8}|Backend.csproj|b:\\proyectos\\prueba_t\u00E9cnica_angular\\backend\\backend\\controllers\\transferscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E68CE821-6A7E-4294-B528-C06F7D9EA9D8}|Backend.csproj|solutionrelative:controllers\\transferscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32CE44C-CDD1-44C3-BB3B-957627EF571C}|..\\ContextoDB\\ContextoDB.csproj|b:\\proyectos\\prueba_t\u00E9cnica_angular\\backend\\contextodb\\tables\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20250804030149_Base_Datos_Final.cs",
+              "DocumentMoniker": "B:\\Proyectos\\Prueba_t\u00E9cnica_angular\\Backend\\ContextoDB\\Migrations\\20250804030149_Base_Datos_Final.cs",
+              "RelativeDocumentMoniker": "..\\ContextoDB\\Migrations\\20250804030149_Base_Datos_Final.cs",
+              "ToolTip": "B:\\Proyectos\\Prueba_t\u00E9cnica_angular\\Backend\\ContextoDB\\Migrations\\20250804030149_Base_Datos_Final.cs",
+              "RelativeToolTip": "..\\ContextoDB\\Migrations\\20250804030149_Base_Datos_Final.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T03:01:49.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "B:\\Proyectos\\Prueba_t\u00E9cnica_angular\\Backend\\Backend\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "B:\\Proyectos\\Prueba_t\u00E9cnica_angular\\Backend\\Backend\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAcwBUAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T02:58:25.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccountsController.cs",
+              "DocumentMoniker": "B:\\Proyectos\\Prueba_t\u00E9cnica_angular\\Backend\\Backend\\Controllers\\AccountsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountsController.cs",
+              "ToolTip": "B:\\Proyectos\\Prueba_t\u00E9cnica_angular\\Backend\\Backend\\Controllers\\AccountsController.cs",
+              "RelativeToolTip": "Controllers\\AccountsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T02:57:06.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TransfersController.cs",
+              "DocumentMoniker": "B:\\Proyectos\\Prueba_t\u00E9cnica_angular\\Backend\\Backend\\Controllers\\TransfersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TransfersController.cs",
+              "ToolTip": "B:\\Proyectos\\Prueba_t\u00E9cnica_angular\\Backend\\Backend\\Controllers\\TransfersController.cs",
+              "RelativeToolTip": "Controllers\\TransfersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T02:47:26.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreacionEjemplos.cs",
+              "DocumentMoniker": "B:\\Proyectos\\Prueba_t\u00E9cnica_angular\\Backend\\Backend\\Controllers\\CreacionEjemplos.cs",
+              "RelativeDocumentMoniker": "Controllers\\CreacionEjemplos.cs",
+              "ToolTip": "B:\\Proyectos\\Prueba_t\u00E9cnica_angular\\Backend\\Backend\\Controllers\\CreacionEjemplos.cs",
+              "RelativeToolTip": "Controllers\\CreacionEjemplos.cs",
+              "ViewState": "AgIAAA4BAAAAAAAAAAAUwCABAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T02:47:31.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Account.cs",
+              "DocumentMoniker": "B:\\Proyectos\\Prueba_t\u00E9cnica_angular\\Backend\\ContextoDB\\Tables\\Account.cs",
+              "RelativeDocumentMoniker": "..\\ContextoDB\\Tables\\Account.cs",
+              "ToolTip": "B:\\Proyectos\\Prueba_t\u00E9cnica_angular\\Backend\\ContextoDB\\Tables\\Account.cs",
+              "RelativeToolTip": "..\\ContextoDB\\Tables\\Account.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T02:45:46.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DebitCard.cs",
+              "DocumentMoniker": "B:\\Proyectos\\Prueba_t\u00E9cnica_angular\\Backend\\ContextoDB\\Tables\\DebitCard.cs",
+              "RelativeDocumentMoniker": "..\\ContextoDB\\Tables\\DebitCard.cs",
+              "ToolTip": "B:\\Proyectos\\Prueba_t\u00E9cnica_angular\\Backend\\ContextoDB\\Tables\\DebitCard.cs",
+              "RelativeToolTip": "..\\ContextoDB\\Tables\\DebitCard.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T02:45:44.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Movement.cs",
+              "DocumentMoniker": "B:\\Proyectos\\Prueba_t\u00E9cnica_angular\\Backend\\ContextoDB\\Tables\\Movement.cs",
+              "RelativeDocumentMoniker": "..\\ContextoDB\\Tables\\Movement.cs",
+              "ToolTip": "B:\\Proyectos\\Prueba_t\u00E9cnica_angular\\Backend\\ContextoDB\\Tables\\Movement.cs",
+              "RelativeToolTip": "..\\ContextoDB\\Tables\\Movement.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T02:45:38.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Transfer.cs",
+              "DocumentMoniker": "B:\\Proyectos\\Prueba_t\u00E9cnica_angular\\Backend\\ContextoDB\\Tables\\Transfer.cs",
+              "RelativeDocumentMoniker": "..\\ContextoDB\\Tables\\Transfer.cs",
+              "ToolTip": "B:\\Proyectos\\Prueba_t\u00E9cnica_angular\\Backend\\ContextoDB\\Tables\\Transfer.cs",
+              "RelativeToolTip": "..\\ContextoDB\\Tables\\Transfer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T02:45:27.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "User.cs",
+              "DocumentMoniker": "B:\\Proyectos\\Prueba_t\u00E9cnica_angular\\Backend\\ContextoDB\\Tables\\User.cs",
+              "RelativeDocumentMoniker": "..\\ContextoDB\\Tables\\User.cs",
+              "ToolTip": "B:\\Proyectos\\Prueba_t\u00E9cnica_angular\\Backend\\ContextoDB\\Tables\\User.cs",
+              "RelativeToolTip": "..\\ContextoDB\\Tables\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T02:44:09.628Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

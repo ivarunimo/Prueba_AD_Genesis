@@ -1,0 +1,29 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Mis Productos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Contenido de las tarjetas -->
+
+
+  <div class="card visa" *ngFor="let debitCard of debitCards">
+    <div class="card-header">
+      <h3>{{debitCard.name_card}}</h3>
+      <span>Visa Platinium</span>
+    </div>
+    <div class="card-body">
+      <div class="card-number">{{debitCard.number.slice(0, 4) + ' ' + '****' + ' ' + '****' + ' ' + debitCard.number.slice(12, 16)}}</div>
+      <div class="card-balance">{{debitCard.balance | currency:'Q ':true}}</div>
+    </div>
+    <div class="card-footer">
+      <span>{{debitCard.type}}</span>
+      <span>{{debitCard.expDate}}</span>
+    </div>
+
+  </div>
+</ion-content>

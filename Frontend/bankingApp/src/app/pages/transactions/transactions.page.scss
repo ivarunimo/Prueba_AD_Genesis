@@ -1,0 +1,101 @@
+// Estilos para la página de transacciones
+ion-content {
+  --background: white;
+}
+
+ion-toolbar {
+  --background: linear-gradient(135deg, #4a148c, #8e24aa);
+  --color: white;
+}
+
+ion-toolbar.secondary-toolbar {
+  --background: white;
+  --color: #333;
+}
+
+ion-segment {
+  --background: white;
+}
+
+ion-segment-button {
+  --color: #080101;
+  --color-checked: #4a148c;
+  --indicator-color: #4a148c;
+}
+
+ion-searchbar {
+  --background: #f5f5f5;
+  --color: #000;
+  --placeholder-color: #666;
+  --icon-color: #666;
+  --border-radius: 10px;
+  --box-shadow: none;
+  margin-bottom: 16px;
+}
+
+.month-section {
+  margin-bottom: 24px;
+}
+
+.month-section h5 {
+  margin: 0 0 12px;
+  color: #000000;
+  font-weight: 600;
+  font-size: 14px;
+  padding-left: 8px;
+}
+
+ion-list {
+  background: transparent;
+  padding: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+ion-item {
+  --background: white;
+  --padding-start: 0;
+  --inner-padding-end: 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+ion-item h3,
+ion-item p {
+  color: #000000;
+}
+
+.transaction-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  ion-icon {
+    font-size: 18px;
+    color: white;
+  }
+}
+
+
+.deposit {
+  background-color: #4caf50;
+}
+
+
+ion-note[color="danger"] {
+  color: #f44336 !important;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+ion-note[color="success"] {
+  color: #4caf50 !important;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+ion-item::part(native) {
+  background: white;
+}

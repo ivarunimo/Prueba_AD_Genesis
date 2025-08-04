@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Transferencia Exitosa</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding ion-text-center">
+  <div class="success-container">
+    <ion-icon name="checkmark-circle" color="success" class="success-icon"></ion-icon>
+    <h2>¡Transferencia Exitosa!</h2>
+    <p>Tu transferencia ha sido procesada correctamente.</p>
+    
+    <ion-card>
+      <ion-card-content>
+        <ion-list lines="none">
+          <ion-item>
+            <ion-label>Monto</ion-label>
+            <ion-note slot="end">Q.500.00</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label>Cuenta de origen</ion-label>
+            <ion-note slot="end">****5432</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label>Cuenta de destino</ion-label>
+            <ion-note slot="end">Kevin Arana</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label>Fecha</ion-label>
+            <ion-note slot="end">21/08/2023</ion-note>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-button expand="block" routerLink="/home">Volver al inicio</ion-button>
+  </div>
+</ion-content>
+
+<style>
+  .success-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .success-icon {
+    font-size: 80px;
+    margin-bottom: 20px;
+  }
+</style>

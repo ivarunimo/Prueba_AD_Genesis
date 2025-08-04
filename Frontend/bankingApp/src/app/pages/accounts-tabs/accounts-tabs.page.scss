@@ -1,0 +1,9 @@
+// Estilos para la página de pestañas de cuentas
+ion-tab-bar {
+  --background: #f5f5f5;
+}
+
+ion-tab-button {
+  --color: #666;
+  --color-selected: var(--ion-color-primary);
+}

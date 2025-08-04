@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Movimientos</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="filter-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+  
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-searchbar placeholder="Buscar transacción" animated></ion-searchbar>
+
+  
+
+    <ion-list lines="full">
+
+      <ion-item *ngFor="let movimiento of movimientos">
+        <ion-avatar slot="start">
+          <div class="transaction-icon deposit">
+            <ion-icon *ngIf="movimiento.kind == 1" name="swap-horizontal-outline"></ion-icon>
+            <ion-icon *ngIf="movimiento.kind == 2" name="arrow-up-outline"></ion-icon>
+            <ion-icon *ngIf="movimiento.kind == 3" name="arrow-down-outline"></ion-icon>
+            <ion-icon *ngIf="movimiento.kind == 4" name="wallet-outline"></ion-icon>
+            <ion-icon *ngIf="movimiento.kind == 5" name="cart-outline"></ion-icon>            
+          </div>
+        </ion-avatar>
+        <ion-label>
+          <h3>{{movimiento.description}}</h3>
+          <p>{{movimiento.fecha | date: 'shortDate'}}</p>
+        </ion-label>
+        <ion-note slot="end" color="{{movimiento.type == 1 ? 'danger' : 'success'}}">
+          {{movimiento.type == 1 ? '-Q.' + movimiento.amount.toFixed(2) : '+Q.' + movimiento.amount.toFixed(2)}}
+          
+        </ion-note>
+        
+      </ion-item>
+    </ion-list>
+
+</ion-content>

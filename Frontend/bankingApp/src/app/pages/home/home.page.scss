@@ -1,0 +1,248 @@
+ion-header ion-toolbar {
+  --background: linear-gradient(135deg, #4a148c, #8e24aa);
+  --color: white;
+}
+
+ion-content {
+  --background: #ffffff;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  margin-right: 12px;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.2;
+}
+
+.greeting {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.user-name {
+  font-weight: bold;
+}
+
+.notification-button {
+  position: relative;
+  --padding-start: 0;
+  --padding-end: 0;
+  width: 44px;
+  height: 44px;
+}
+
+.notification-badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  font-size: 10px;
+  font-weight: bold;
+  --padding-start: 5px;
+  --padding-end: 5px;
+  border-radius: 10px;
+  border: 1.5px solid var(--ion-toolbar-color, white);
+}
+
+// Balance card
+.balance-card {
+  margin-bottom: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.balance-amount {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+}
+
+.Notification {
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+// Credit card
+.credit-card {
+  background: linear-gradient(135deg, #4a148c, #8e24aa);
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.credit-card::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -40px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.credit-card::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  right: -40px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.card-header, .card-body, .card-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+.card-header {
+  margin-bottom: 30px;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-weight: 500;
+}
+
+.card-body {
+  margin-bottom: 30px;
+}
+
+.card-number {
+  width: 100%;
+  letter-spacing: 2px;
+  font-size: 1.1em;
+  font-family: monospace;
+}
+
+.card-balance {
+  margin-top: 15px;
+  width: 100%;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+// Quick actions
+.section-title {
+  margin: 0 0 16px;
+  font-weight: 600;
+  color: #333;
+  font-size: 18px;
+}
+
+.quick-actions {
+  margin-bottom: 24px;
+  
+}
+
+.menu-button {
+  height: 80px;
+  border: 1px solid #00000052;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  ion-icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  
+  ion-label {
+    font-size: 12px;
+    color: #666;
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+// Recent transactions
+.recent-transactions {
+  margin-bottom: 20px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+ion-list {
+  background: transparent;
+  padding: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+ion-item {
+  --padding-start: 16px;
+  --inner-padding-end: 16px;
+  --background: white;
+  --border-color: #f0f0f0;
+
+  ion-label {
+    h3, p {
+      color: #000000;
+    }
+  }
+}
+
+.transaction-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  ion-icon {
+    font-size: 18px;
+    color: white;
+  }
+}
+
+.shopping {
+  background-color: #f44336;
+}
+
+.deposit {
+  background-color: #4caf50;
+}
+
+.entertainment {
+  background-color: #2196f3;
+}
+
+ion-note {
+  font-weight: 600;
+  font-size: 14px;
+}

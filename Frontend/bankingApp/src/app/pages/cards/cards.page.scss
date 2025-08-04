@@ -1,0 +1,51 @@
+ion-content {
+  --background: white;
+}
+
+/* Solo un estilo para toolbar con color morado */
+ion-toolbar {
+  --background: linear-gradient(135deg, #4a148c, #8e24aa);
+  --color: white;
+}
+
+.card {
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+}
+
+.visa {
+  background: linear-gradient(135deg, #4a148c, #8e24aa);
+}
+
+.mastercard {
+  background: linear-gradient(135deg, #b71c1c, #e53935);
+}
+
+.card-header, .card-body, .card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-number {
+  letter-spacing: 2px;
+  font-size: 1.1em;
+  font-family: monospace;
+}
+
+.card-balance {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+// Estilos específicos para resolver el problema de las dos barras
+ion-header {
+  --ion-toolbar-border-color: transparent;
+}

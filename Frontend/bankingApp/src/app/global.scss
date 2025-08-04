@@ -1,0 +1,77 @@
+// Estilos mejorados para campos de entrada
+ion-item {
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  --border-radius: var(--app-input-border-radius);
+  --background: var(--app-input-background);
+  --box-shadow: var(--app-input-box-shadow);
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+  
+  &.item-has-focus {
+    --background: var(--app-input-focus-background);
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transform: translateY(-1px);
+  }
+  
+  ion-label {
+    color: #555;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  
+  ion-input, ion-textarea, ion-select {
+    --padding-start: 0;
+    --padding-end: 0;
+    font-size: 16px;
+    color: #333;
+    
+    &::placeholder {
+      color: #999;
+      font-weight: 300;
+    }
+  }
+  
+  &.ion-invalid.ion-touched {
+    --background: rgba(255, 235, 235, 0.7);
+    --border-color: #ff5b71;
+  }
+}
+
+// Estilos para campos monetarios
+ion-input[type="number"] {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--app-primary-shade);
+}
+
+// Estilo para la descripción de campos
+.input-description {
+  font-size: 12px;
+  color: #666;
+  margin-top: -12px;
+  margin-bottom: 16px;
+  padding-left: 16px;
+}
+
+// Estilos globales para fondos blancos
+ion-content {
+  --background: #ffffff;
+}
+
+ion-item {
+  --background: #f9f9f9;
+  --border-color: #eaeaea;
+}
+
+// Ajustes para mejor legibilidad en fondo blanco
+ion-label, p, h1, h2, h3, h4, h5, h6 {
+  color: #333333;
+}
+
+ion-card {
+  background: #ffffff;
+}

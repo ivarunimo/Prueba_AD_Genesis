@@ -1,0 +1,44 @@
+<ion-content class="ion-content" [fullscreen]="true">
+  <div class="login-container">
+    <div class="logo-container">
+      <div class="logo-circle">
+        <img src="/assets/images/Lock.png" alt="Logo" class="logo">
+      </div>
+      <h1 class="bank-name">Banca APP</h1>
+    </div>
+
+    <form [formGroup]="loginForm" class="login-form" (ngSubmit)="onSubmitLogin()">
+      <ion-item class="custom-input">
+        <ion-icon name="person-outline" slot="start"></ion-icon>
+        <ion-input type="text" placeholder="Usuario" formControlName="username"></ion-input>
+      </ion-item>
+
+      <ion-item class="custom-input">
+        <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+        <ion-input type="password" placeholder="Contraseña" formControlName="password"></ion-input>
+      </ion-item>
+
+
+      <ion-button type="submit" [disabled]="loginForm.invalid" expand="block" class="login-button">
+        <ion-icon name="log-in-outline" slot="start"></ion-icon>
+        Iniciar Sesión
+      </ion-button>
+
+      <div class="forgot-password">
+        <ion-text>¿Olvidaste tu contraseña?</ion-text>
+      </div>
+    </form>
+
+    <div class="register-link">
+      <ion-text>¿No tienes una cuenta?</ion-text>
+      <ion-button class="register-button" fill="clear" routerLink="/register">Registrarse</ion-button>
+    </div>
+    
+    <div class="biometric-login">
+      <ion-button fill="clear" shape="round">
+        <ion-icon slot="icon-only" name="finger-print-outline" size="large"></ion-icon>
+      </ion-button>
+      <p>Iniciar con huella digital</p>
+    </div>
+  </div>
+</ion-content>

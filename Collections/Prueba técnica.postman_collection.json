@@ -1,0 +1,520 @@
+{
+	"info": {
+		"_postman_id": "5965c8a5-2b4c-4500-81ef-38afc5307ef2",
+		"name": "Prueba técnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14594097"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"AMM_35\",\r\n    \"password\": \"AlexM_9999\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5057/api/Login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5057",
+					"path": [
+						"api",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"Juan_34\",\r\n  \"password\": \"Contrasena_34\",\r\n  \"fullName\": \"Juan Pérez Garcia\",\r\n  \"email\": \"JP_G92@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5057/api/Users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5057",
+					"path": [
+						"api",
+						"Users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Todos los usuarios existentes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUHJ1ZWJhIiwibmJmIjoxNzU0MjM3Njc1LCJleHAiOjE3NTQyNDEyNzUsImlhdCI6MTc1NDIzNzY3NX0.3aLwX7ut1wPIqvhf5TnRJjl-aw0nwOvGu2SJUY0tzYM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5057/api/Users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5057",
+					"path": [
+						"api",
+						"Users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Todos los usuarios existentes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUHJ1ZWJhIiwibmJmIjoxNzU0MjM3Njc1LCJleHAiOjE3NTQyNDEyNzUsImlhdCI6MTc1NDIzNzY3NX0.3aLwX7ut1wPIqvhf5TnRJjl-aw0nwOvGu2SJUY0tzYM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5057/api/DebitCard/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5057",
+					"path": [
+						"api",
+						"DebitCard",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Accounts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUHJ1ZWJhIiwibmJmIjoxNzU0MjM3Njc1LCJleHAiOjE3NTQyNDEyNzUsImlhdCI6MTc1NDIzNzY3NX0.3aLwX7ut1wPIqvhf5TnRJjl-aw0nwOvGu2SJUY0tzYM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5057/api/Accounts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5057",
+					"path": [
+						"api",
+						"Accounts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Movements User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUHJ1ZWJhIiwibmJmIjoxNzU0MjM3Njc1LCJleHAiOjE3NTQyNDEyNzUsImlhdCI6MTc1NDIzNzY3NX0.3aLwX7ut1wPIqvhf5TnRJjl-aw0nwOvGu2SJUY0tzYM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5057/api/Movements/User/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5057",
+					"path": [
+						"api",
+						"Movements",
+						"User",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Movements Account",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUHJ1ZWJhIiwibmJmIjoxNzU0MjM3Njc1LCJleHAiOjE3NTQyNDEyNzUsImlhdCI6MTc1NDIzNzY3NX0.3aLwX7ut1wPIqvhf5TnRJjl-aw0nwOvGu2SJUY0tzYM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5057/api/Movements/Account/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5057",
+					"path": [
+						"api",
+						"Movements",
+						"Account",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Transfers Not Angular",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUHJ1ZWJhIiwibmJmIjoxNzU0MjM3Njc1LCJleHAiOjE3NTQyNDEyNzUsImlhdCI6MTc1NDIzNzY3NX0.3aLwX7ut1wPIqvhf5TnRJjl-aw0nwOvGu2SJUY0tzYM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_account\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5057/api/Transfers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5057",
+					"path": [
+						"api",
+						"Transfers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Transfers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUHJ1ZWJhIiwibmJmIjoxNzU0MjM3Njc1LCJleHAiOjE3NTQyNDEyNzUsImlhdCI6MTc1NDIzNzY3NX0.3aLwX7ut1wPIqvhf5TnRJjl-aw0nwOvGu2SJUY0tzYM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5057/api/Transfers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5057",
+					"path": [
+						"api",
+						"Transfers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crea Ejemplos de usuarios",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUHJ1ZWJhIiwibmJmIjoxNzU0MjM3Njc1LCJleHAiOjE3NTQyNDEyNzUsImlhdCI6MTc1NDIzNzY3NX0.3aLwX7ut1wPIqvhf5TnRJjl-aw0nwOvGu2SJUY0tzYM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5057/api/CreacionEjemplos/CreateUsers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5057",
+					"path": [
+						"api",
+						"CreacionEjemplos",
+						"CreateUsers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crea Ejemplos de cuentas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUHJ1ZWJhIiwibmJmIjoxNzU0MjM3Njc1LCJleHAiOjE3NTQyNDEyNzUsImlhdCI6MTc1NDIzNzY3NX0.3aLwX7ut1wPIqvhf5TnRJjl-aw0nwOvGu2SJUY0tzYM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5057/api/CreacionEjemplos/CreateAccount/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5057",
+					"path": [
+						"api",
+						"CreacionEjemplos",
+						"CreateAccount",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crea Ejemplos Movimientos y transferencias",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUHJ1ZWJhIiwibmJmIjoxNzU0MjM3Njc1LCJleHAiOjE3NTQyNDEyNzUsImlhdCI6MTc1NDIzNzY3NX0.3aLwX7ut1wPIqvhf5TnRJjl-aw0nwOvGu2SJUY0tzYM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5057/api/CreacionEjemplos/CreateTransfersMovements/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5057",
+					"path": [
+						"api",
+						"CreacionEjemplos",
+						"CreateTransfersMovements",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crea Ejemplos de tarjetas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUHJ1ZWJhIiwibmJmIjoxNzU0MjM3Njc1LCJleHAiOjE3NTQyNDEyNzUsImlhdCI6MTc1NDIzNzY3NX0.3aLwX7ut1wPIqvhf5TnRJjl-aw0nwOvGu2SJUY0tzYM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5057/api/CreacionEjemplos/CreateCards/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5057",
+					"path": [
+						"api",
+						"CreacionEjemplos",
+						"CreateCards",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Cuenta",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUHJ1ZWJhIiwibmJmIjoxNzU0MjM3Njc1LCJleHAiOjE3NTQyNDEyNzUsImlhdCI6MTc1NDIzNzY3NX0.3aLwX7ut1wPIqvhf5TnRJjl-aw0nwOvGu2SJUY0tzYM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"number\": \"999-554-88\",\r\n    \"balance\": 500.50,\r\n    \"account_name\": \"mi cuenta favorita\",\r\n    \"id_user\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5057/api/Accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5057",
+					"path": [
+						"api",
+						"Accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Tarjeta",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUHJ1ZWJhIiwibmJmIjoxNzU0MjM3Njc1LCJleHAiOjE3NTQyNDEyNzUsImlhdCI6MTc1NDIzNzY3NX0.3aLwX7ut1wPIqvhf5TnRJjl-aw0nwOvGu2SJUY0tzYM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"number\": \"1234567890123456\",\r\n  \"active\": true,\r\n  \"id_account\": 1001,\r\n  \"type\": \"Débito\",\r\n  \"expDate\": \"12/27\",\r\n  \"name_card\": \"Juan Pérez\",\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5057/api/CreacionEjemplos/CreateCards/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5057",
+					"path": [
+						"api",
+						"CreacionEjemplos",
+						"CreateCards",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

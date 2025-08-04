@@ -1,0 +1,208 @@
+ion-content {
+  --background: white;
+}
+
+ion-header ion-toolbar {
+  --background: linear-gradient(135deg, #4a148c, #8e24aa);
+  --color: white;
+  --border-width: 0;
+}
+
+/* Solo un estilo para toolbar con color morado */
+ion-toolbar {
+  --background: white;
+  --color: #333;
+  --border-width: 0;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 12px;
+  border: 3px solid #f0f0f0;
+}
+
+.profile-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #6A1B9A; // Color morado del texto
+}
+
+ion-card {
+  border-radius: 16px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+}
+
+ion-card-header {
+  background: linear-gradient(135deg, rgba(74, 20, 140, 0.05), rgba(142, 36, 170, 0.1));
+  padding: 20px;
+}
+
+ion-card-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--ion-color-primary);
+  margin-top: 8px;
+}
+
+ion-card-subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+ion-card-content {
+  padding: 20px;
+  
+  p {
+    color: #555;
+    margin: 8px 0;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    
+    &:last-child {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      font-weight: 600;
+    }
+  }
+}
+
+.account-actions {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 16px 16px;
+  
+  ion-button {
+    --color: var(--ion-color-primary);
+    --padding-start: 8px;
+    --padding-end: 8px;
+    
+    ion-icon {
+      margin-right: 6px;
+    }
+  }
+}
+
+ion-header {
+  ion-toolbar {
+    --background: white;
+    --color: #333;
+  }
+}
+
+.card-container {
+  padding: 16px;
+  background-color: white;
+}
+
+.credit-card {
+  color: white;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  
+  &.purple {
+    background: linear-gradient(135deg, #4a148c, #8e24aa);
+  }
+  
+  &.red {
+    background: linear-gradient(135deg, #b71c1c, #e53935);
+  }
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-weight: 500;
+}
+
+.card-header span {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.card-number {
+  letter-spacing: 2px;
+  font-size: 1.1em;
+  font-family: monospace;
+}
+
+.card-balance {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.account-card {
+  --background: #f9f9f9;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.account-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.account-number {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+  font-family: monospace;
+}
+
+.balance-label {
+  font-size: 14px;
+  color: #888888;
+}
+
+.balance-amount {
+  font-size: 18px;
+  font-weight: bold;
+  color: #6A1B9A; // Color morado del texto
+}

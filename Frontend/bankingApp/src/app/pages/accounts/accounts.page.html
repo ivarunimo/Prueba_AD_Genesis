@@ -1,0 +1,44 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Mis Cuentas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="profile-header">
+    <ion-avatar class="profile-avatar">
+      <img src="https://i.ibb.co/GvHWm8yz/imagen-2025-08-02-235345880.png" alt="User Avatar" />
+    </ion-avatar>
+    <h2 class="profile-name">{{fullName}}</h2>
+  </div>
+
+  <ion-card class="account-card" *ngFor="let account of accounts">
+    <ion-card-content>
+      <ion-grid>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <div class="account-title">{{account.account_name}}</div>
+          </ion-col>
+          <ion-col class="ion-text-end">
+            <div class="account-number">{{account.number}}</div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <div class="balance-label">Saldo</div>
+          </ion-col>
+          <ion-col class="ion-text-end">
+            <div class="balance-amount">{{account.balance | currency:'Q ':true}}</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  
+
+
+</ion-content>
