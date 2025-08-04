@@ -25,6 +25,7 @@ export class CardsPage implements OnInit {
   ) { }
 
   ngOnInit() {
+    
     this.debitCardService.getDebitCards(Number(sessionStorage.getItem('user_id'))).subscribe(cards => {
       this.debitCards = cards;
       cards.forEach(card => {

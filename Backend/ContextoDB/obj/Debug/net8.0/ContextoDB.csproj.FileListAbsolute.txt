@@ -27,3 +27,18 @@ B:\Proyectos\Prueba_técnica_angular\Backend\ContextoDB\obj\Debug\net8.0\refint\
 B:\Proyectos\Prueba_técnica_angular\Backend\ContextoDB\obj\Debug\net8.0\ContextoDB.pdb
 B:\Proyectos\Prueba_técnica_angular\Backend\ContextoDB\obj\Debug\net8.0\ContextoDB.genruntimeconfig.cache
 B:\Proyectos\Prueba_técnica_angular\Backend\ContextoDB\obj\Debug\net8.0\ref\ContextoDB.dll
+B:\Proyectos\Prueba definitiva\Backend\ContextoDB\bin\Debug\net8.0\ContextoDB.deps.json
+B:\Proyectos\Prueba definitiva\Backend\ContextoDB\bin\Debug\net8.0\ContextoDB.runtimeconfig.json
+B:\Proyectos\Prueba definitiva\Backend\ContextoDB\bin\Debug\net8.0\ContextoDB.dll
+B:\Proyectos\Prueba definitiva\Backend\ContextoDB\bin\Debug\net8.0\ContextoDB.pdb
+B:\Proyectos\Prueba definitiva\Backend\ContextoDB\obj\Debug\net8.0\ContextoDB.csproj.AssemblyReference.cache
+B:\Proyectos\Prueba definitiva\Backend\ContextoDB\obj\Debug\net8.0\ContextoDB.GeneratedMSBuildEditorConfig.editorconfig
+B:\Proyectos\Prueba definitiva\Backend\ContextoDB\obj\Debug\net8.0\ContextoDB.AssemblyInfoInputs.cache
+B:\Proyectos\Prueba definitiva\Backend\ContextoDB\obj\Debug\net8.0\ContextoDB.AssemblyInfo.cs
+B:\Proyectos\Prueba definitiva\Backend\ContextoDB\obj\Debug\net8.0\ContextoDB.csproj.CoreCompileInputs.cache
+B:\Proyectos\Prueba definitiva\Backend\ContextoDB\obj\Debug\net8.0\ContextoDB.sourcelink.json
+B:\Proyectos\Prueba definitiva\Backend\ContextoDB\obj\Debug\net8.0\ContextoDB.dll
+B:\Proyectos\Prueba definitiva\Backend\ContextoDB\obj\Debug\net8.0\refint\ContextoDB.dll
+B:\Proyectos\Prueba definitiva\Backend\ContextoDB\obj\Debug\net8.0\ContextoDB.pdb
+B:\Proyectos\Prueba definitiva\Backend\ContextoDB\obj\Debug\net8.0\ContextoDB.genruntimeconfig.cache
+B:\Proyectos\Prueba definitiva\Backend\ContextoDB\obj\Debug\net8.0\ref\ContextoDB.dll

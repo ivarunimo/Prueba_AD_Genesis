@@ -15,6 +15,11 @@
     <h2 class="profile-name">{{fullName}}</h2>
   </div>
 
+  <div *ngIf="accounts.length === 0" class="no-accounts-message">
+    <ion-text>No tienes cuentas registradas.</ion-text>
+
+  </div>
+
   <ion-card class="account-card" *ngFor="let account of accounts">
     <ion-card-content>
       <ion-grid>

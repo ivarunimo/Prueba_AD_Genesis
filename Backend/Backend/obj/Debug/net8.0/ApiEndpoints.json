@@ -159,6 +159,26 @@
   },
   {
     "ContainingType": "Backend.Controllers.CreacionEjemplos",
+    "Method": "CreateTransfersAndMovements2",
+    "RelativePath": "api/CreacionEjemplos/CreateTransfersMovements2",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ContextoDB.Tables.DebitCard",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Backend.Controllers.CreacionEjemplos",
     "Method": "CreateUserExamples",
     "RelativePath": "api/CreacionEjemplos/CreateUsers",
     "HttpMethod": "POST",
@@ -168,6 +188,32 @@
     "ReturnTypes": [
       {
         "Type": "ContextoDB.Tables.User",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Backend.Controllers.DebitCardController",
+    "Method": "CreateDebitCard",
+    "RelativePath": "api/DebitCard",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "debitCard",
+        "Type": "ContextoDB.Tables.DebitCard",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ContextoDB.Tables.DebitCard",
         "MediaTypes": [
           "text/plain",
           "application/json",

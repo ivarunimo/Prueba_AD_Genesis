@@ -7,3 +7,12 @@ ion-tab-button {
   --color: #666;
   --color-selected: var(--ion-color-primary);
 }
+
+ion-header {
+  --ion-toolbar-border-color: transparent;
+}
+
+ion-toolbar {
+  --background: linear-gradient(135deg, #4a148c, #8e24aa);
+  --color: white;
+}

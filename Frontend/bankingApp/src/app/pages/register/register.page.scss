@@ -25,6 +25,7 @@ ion-toolbar {
 .custom-input {
   --background: #f0f2f5;
   --border-radius: 10px;
+  --color: #000000;
   --padding-start: 12px;
   margin-bottom: 16px;
   box-shadow: none;
@@ -48,6 +49,25 @@ ion-item ion-icon {
   height: 48px;
   font-weight: 500;
   box-shadow: 0 4px 8px rgba(74, 20, 140, 0.2);
+
+  &:disabled {
+    --background: #ccc;
+    --color: #666;
+  }
+}
+
+.error-message {
+  color: #ff3030;
+  font-size: 12px;
+  margin-top: -12px;
+  margin-bottom: 8px;
+  margin-left: 12px;
+  font-weight: 500;
+}
+
+.custom-input.ng-invalid.ng-touched {
+  --border-color: #ff3030;
+  border-color: #ff3030;
 }
 
 .terms-text {

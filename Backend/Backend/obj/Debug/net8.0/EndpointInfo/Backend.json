@@ -285,6 +285,35 @@
         }
       }
     },
+    "/api/CreacionEjemplos/CreateTransfersMovements2": {
+      "post": {
+        "tags": [
+          "CreacionEjemplos"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/DebitCard"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DebitCard"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DebitCard"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/DebitCard/{id_user}": {
       "get": {
         "tags": [
@@ -301,6 +330,54 @@
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/DebitCard"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DebitCard"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DebitCard"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/DebitCard": {
+      "post": {
+        "tags": [
+          "DebitCard"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DebitCard"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DebitCard"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DebitCard"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK",

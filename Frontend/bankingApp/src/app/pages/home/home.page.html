@@ -12,9 +12,8 @@
       </div>
     </ion-title>
     <ion-buttons slot="end">
-      <ion-button class="notification-button">
-        <ion-icon slot="icon-only" name="notifications"></ion-icon>
-        <ion-badge color="danger" class="notification-badge">3</ion-badge>
+      <ion-button (click)="logout()" class="notification-button">
+        <ion-icon  name="log-out-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -27,7 +26,7 @@
     </ion-card-header>
   </ion-card>
 
-  <div *ngIf="debitCard.id == 0">
+  <div *ngIf="NumberOfCards == 0">
     <ion-card class="balance-card">
     <ion-card-header>
       <ion-card-title class="Notification">No Posees Tarjetas Todavía</ion-card-title>
@@ -35,7 +34,7 @@
   </ion-card>
     
   </div>
-  <div *ngIf="debitCard.id != 0" class="credit-card">
+  <div *ngIf="NumberOfCards > 0" class="credit-card">
     <div class="card-header">
       <h3>{{fullName}}</h3>
       <span>Banco Platinium</span>

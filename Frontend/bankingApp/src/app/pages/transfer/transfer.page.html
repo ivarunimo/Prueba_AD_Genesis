@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <form [formGroup]="transferForm" class="login-form" (ngSubmit)="onSubmitTransfer()">
+  <form [formGroup]="transferForm" class="login-form" (ngSubmit)="confirmation()">
     <div class="cuenta-label">Cuenta de origen - Saldo: {{ amountOrigin | currency:'Q':true }}</div>
     <ion-item>
       <ion-select formControlName="sourceAccount" placeholder="Seleccionar cuenta">

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AccountsTabsPage } from './accounts-tabs.page';
+import { authGuard } from 'src/app/guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -10,11 +11,13 @@ const routes: Routes = [
     children: [
       {
         path: 'accounts',
-        loadChildren: () => import('../accounts/accounts.module').then(m => m.AccountsPageModule)
+        loadChildren: () => import('../accounts/accounts.module').then(m => m.AccountsPageModule),
+        canActivate: [authGuard]
       },
       {
         path: 'cards',
-        loadChildren: () => import('../cards/cards.module').then(m => m.CardsPageModule)
+        loadChildren: () => import('../cards/cards.module').then(m => m.CardsPageModule),
+        canActivate: [authGuard]
       },
       {
         path: '',

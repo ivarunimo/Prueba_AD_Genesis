@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from 'src/app/services/user/user.service';
 import { Router } from '@angular/router';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -21,7 +22,8 @@ export class LoginPage implements OnInit {
   constructor(
     private userService: UserService,
     private router: Router,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private toastController: ToastController
   ) { 
     this.loginForm = this.fb.group({
       username: ['', Validators.required],
@@ -44,8 +46,15 @@ export class LoginPage implements OnInit {
           sessionStorage.setItem('fullName', response.fullName);
           this.router.navigate(['/home']);
         },
-        error => {
-          alert('Usuario o contraseña incorrectos');
+        async error => {
+          const toast = await this.toastController.create({
+              message: 'Credenciales incorrectas, tu usuario o contraseña son incorrectos',
+              duration: 3000,
+              color: 'danger', // success, danger, warning, etc.
+              position: 'middle', // 'top', 'middle', 'bottom'
+              icon: 'close-circle-outline',
+            });
+            toast.present();
           // Handle login error, e.g., show an alert
         }
       );

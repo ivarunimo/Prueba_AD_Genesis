@@ -11,19 +11,48 @@
   <!-- Contenido de las tarjetas -->
 
 
-  <div class="card visa" *ngFor="let debitCard of debitCards">
-    <div class="card-header">
-      <h3>{{debitCard.name_card}}</h3>
-      <span>Visa Platinium</span>
-    </div>
-    <div class="card-body">
-      <div class="card-number">{{debitCard.number.slice(0, 4) + ' ' + '****' + ' ' + '****' + ' ' + debitCard.number.slice(12, 16)}}</div>
-      <div class="card-balance">{{debitCard.balance | currency:'Q ':true}}</div>
-    </div>
-    <div class="card-footer">
-      <span>{{debitCard.type}}</span>
-      <span>{{debitCard.expDate}}</span>
-    </div>
-
+  <div *ngIf="debitCards.length === 0" class="no-cards-message">
+    <ion-text>No tienes tarjetas registradas.</ion-text>
+    
   </div>
+
+    <div *ngFor="let debitCard of debitCards">
+
+      <div class="card visa" *ngIf="debitCard.type === 'Visa'">
+        <div class="card-header">
+          <h3>{{debitCard.name_card}}</h3>
+          <span>Visa Platinium</span>
+        </div>
+        <div class="card-body">
+          <div class="card-number">{{debitCard.number.slice(0, 4) + ' ' + '****' + ' ' + '****' + ' ' +
+            debitCard.number.slice(12, 16)}}</div>
+          <div class="card-balance">{{debitCard.balance | currency:'Q ':true}}</div>
+        </div>
+        <div class="card-footer">
+          <span>{{debitCard.type}}</span>
+          <span>{{debitCard.expDate}}</span>
+        </div>
+
+
+      </div>
+
+
+      <div class="card mastercard" *ngIf="debitCard.type !== 'Visa'">
+        <div class="card-header">
+          <h3>{{debitCard.name_card}}</h3>
+          <span>Mastercard Gold</span>
+        </div>
+        <div class="card-body">
+          <div class="card-number">{{debitCard.number.slice(0, 4) + ' ' + '****' + ' ' + '****' + ' ' +
+            debitCard.number.slice(12, 16)}}</div>
+          <div class="card-balance">{{debitCard.balance | currency:'Q ':true}}</div>
+        </div>
+        <div class="card-footer">
+          <span>{{debitCard.type}}</span>
+          <span>{{debitCard.expDate}}</span>
+        </div>
+
+
+      </div>
+    </div>
 </ion-content>

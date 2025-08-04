@@ -10,36 +10,82 @@
 <ion-content class="ion-padding">
   <div class="register-container">
     <h2>Bienvenido</h2>
-    <p>Crea tu cuenta para empezar a usar AkisiBank.</p>
+    <p>Crea tu cuenta para empezar a usar Banking APP</p>
 
-    <form>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      
       <ion-item class="custom-input">
         <ion-icon name="person-circle-outline" slot="start"></ion-icon>
-        <ion-input type="text" placeholder="Nombre completo"></ion-input>
+        <ion-input 
+          type="text" 
+          placeholder="Nombre de usuario"
+          formControlName="username">
+        </ion-input>
       </ion-item>
+      <div class="error-message" *ngIf="getFieldError('username')">
+        {{ getFieldError('username') }}
+      </div>
+
+
+      <ion-item class="custom-input">
+        <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+        <ion-input 
+          type="text" 
+          placeholder="Nombre completo"
+          formControlName="fullName">
+        </ion-input>
+      </ion-item>
+      <div class="error-message" *ngIf="getFieldError('fullName')">
+        {{ getFieldError('fullName') }}
+      </div>
 
       <ion-item class="custom-input">
         <ion-icon name="mail-outline" slot="start"></ion-icon>
-        <ion-input type="email" placeholder="Correo electrónico"></ion-input>
+        <ion-input 
+          type="email" 
+          placeholder="Correo electrónico"
+          formControlName="email">
+        </ion-input>
       </ion-item>
+      <div class="error-message" *ngIf="getFieldError('email')">
+        {{ getFieldError('email') }}
+      </div>
 
       <ion-item class="custom-input">
         <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
-        <ion-input type="password" placeholder="Crear contraseña"></ion-input>
+        <ion-input 
+          type="password" 
+          placeholder="Crear contraseña"
+          formControlName="password">
+        </ion-input>
       </ion-item>
+      <div class="error-message" *ngIf="getFieldError('password')">
+        {{ getFieldError('password') }}
+      </div>
 
       <ion-item class="custom-input">
         <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
-        <ion-input type="password" placeholder="Confirmar contraseña"></ion-input>
+        <ion-input 
+          type="password" 
+          placeholder="Confirmar contraseña"
+          formControlName="confirmPassword">
+        </ion-input>
       </ion-item>
+      <div class="error-message" *ngIf="getFieldError('confirmPassword')">
+        {{ getFieldError('confirmPassword') }}
+      </div>
 
-      <ion-button expand="block" routerLink="/home" class="register-button">
+      <ion-button 
+        expand="block" 
+        class="register-button"
+        type="submit"
+        [disabled]="registerForm.invalid">
         Registrarse
       </ion-button>
     </form>
 
     <div class="terms-text">
-      <p>Al registrarte, aceptas nuestros <a href="#">Términos de Servicio</a> y <a href="#">Política de Privacidad</a>.</p>
+      <p>Al registrarte, aceptas nuestros <a>Términos de Servicio</a> y <a>Política de Privacidad</a>.</p>
     </div>
   </div>
 </ion-content>

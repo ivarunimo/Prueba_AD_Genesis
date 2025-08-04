@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ContextoDB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cfc2b64e497fbe4aad30d57941a46477f72c7e06")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5771dff6a0a0cf2ac8f70e6d411b718089b58fc0")]
 [assembly: System.Reflection.AssemblyProductAttribute("ContextoDB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ContextoDB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

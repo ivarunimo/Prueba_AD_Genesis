@@ -8,6 +8,7 @@ import { AccountService } from 'src/app/services/account/account.service';
 import { Movements } from 'src/app/models/Movements';
 import { MovementService } from 'src/app/services/movement/movement.service';
 import { ToastController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -29,6 +30,7 @@ export class HomePage implements OnInit {
     name_card: '',
     balance: 0
   };
+  public NumberOfCards = 0;
   public fullName: string = sessionStorage.getItem('fullName') || 'User';
   public movimientos: Movements[] = [];
 
@@ -37,12 +39,14 @@ export class HomePage implements OnInit {
     private debitCardService: DebitCardService,
     private accountService: AccountService,
     private movementsService: MovementService,
-    private toastController: ToastController
+    private toastController: ToastController,
+    private router: Router
   ) { }
 
   ngOnInit() {
     this.debitCardService.getDebitCards(Number(sessionStorage.getItem('user_id'))).subscribe(cards => {
       console.log(cards);
+      this.NumberOfCards = cards.length;
       if (cards && cards.length > 0) {
         this.debitCard = {
           id: cards[0].id,
@@ -68,6 +72,10 @@ export class HomePage implements OnInit {
     });
 
 
+  }
+  logout() {
+    sessionStorage.clear();
+    this.router.navigate(['/login']);
   }
 
   async navigateToBalance() {

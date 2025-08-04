@@ -61,7 +61,9 @@ namespace Backend.Controllers
                 return BadRequest("Usuarios no encontrados.");
             var cuenta1 = await _context.Accounts.FirstOrDefaultAsync(a => a.id_user == user.Id);
             var cuenta2 = await _context.Accounts.Where(a => a.number == "678-1203-97").FirstOrDefaultAsync();
-            var cuenta3 = await _context.Accounts.Where(a => a.number == "491-6532-08").FirstOrDefaultAsync();
+            var cuenta3 = await _context.Accounts.Where(a => a.number == "491-6532-08").FirstOrDefaultAsync(); 
+            var cuenta4 = await _context.Accounts.Where(a => a.number == "847-2901-34").FirstOrDefaultAsync();
+
             if (cuenta1 == null || cuenta2 == null)
                 return BadRequest("Cuentas no encontradas.");
             var tarjeta1 = new DebitCard
@@ -95,7 +97,7 @@ namespace Backend.Controllers
             {
                 number = "6543210987654321",
                 active = true,
-                id_account = cuenta2.Id,
+                id_account = cuenta4.Id,
                 type = "MasterCard",
                 expDate = "08/26",
                 name_card = "Jojo"
@@ -142,7 +144,7 @@ namespace Backend.Controllers
             var acc4User = new Account
             {
                 number = "678-1203-97",
-                balance = 1000,
+                balance = 4000,
                 account_name = "Cuenta Plazo Fijo",
                 id_user = user.Id
             };
@@ -279,6 +281,130 @@ namespace Backend.Controllers
             {
                 origin = cuentaOrigen.Id,
                 description = "Retiro",
+                amount = 500,
+                fecha = DateTime.UtcNow,
+                type = 2,
+                kind = 2,
+                id_user = cuentaOrigen.id_user
+            };
+
+
+
+
+            _context.Movements.Add(movimientoOrigen);
+            _context.Movements.Add(movimientoOrigen1);
+            _context.Movements.Add(movimientoOrigen2);
+            _context.Movements.Add(movimientoDestino);
+            _context.Movements.Add(movimientoDestino1);
+            _context.Movements.Add(movimientoDestino2);
+            _context.Movements.Add(movimientoDestino3);
+
+            await _context.SaveChangesAsync();
+
+            return Ok(new { transferencia, movimientoOrigen, movimientoDestino });
+
+        }
+
+        [HttpPost("CreateTransfersMovements2")]
+        public async Task<ActionResult<DebitCard>> CreateTransfersAndMovements2()
+        {
+            // Obtener cuentas de ejemplo
+            var cuentaOrigen = await _context.Accounts.FirstOrDefaultAsync(a => a.number == "678-1203-97");
+            var cuentaDestino = await _context.Accounts.FirstOrDefaultAsync(a => a.number == "491-6532-08");
+
+            if (cuentaOrigen == null || cuentaDestino == null)
+                return BadRequest("No se encontraron las cuentas de ejemplo.");
+
+            // Crear una transferencia de ejemplo
+            var transferencia = new Transfer
+            {
+                origin = cuentaOrigen.Id,
+                destiny = cuentaDestino.Id,
+                description = "Transferencia de ejemplo de Pyme a Nómina",
+                amount = 700.00
+            };
+            _context.Transfers.Add(transferencia);
+            cuentaOrigen.balance -= transferencia.amount;
+            cuentaDestino.balance += transferencia.amount;
+
+            _context.Entry(cuentaOrigen).State = EntityState.Modified;
+            _context.Entry(cuentaDestino).State = EntityState.Modified;
+
+
+            // Crear movimientos asociados a la transferencia
+            var movimientoOrigen = new Movement
+            {
+                origin = cuentaOrigen.Id,
+                description = "Movimiento normal",
+                amount = 700.00,
+                fecha = DateTime.UtcNow,
+                type = 2,
+                kind = 1,
+                id_user = cuentaOrigen.id_user
+            };
+
+            var movimientoDestino = new Movement
+            {
+                origin = cuentaDestino.Id,
+                description = "Ahorro",
+                amount = 700.00,
+                fecha = DateTime.UtcNow,
+                type = 1,
+                kind = 1,
+                id_user = cuentaDestino.id_user
+            };
+
+
+
+            var movimientoOrigen1 = new Movement
+            {
+                origin = cuentaOrigen.Id,
+                description = "DEPOSITO",
+                amount = 200.00,
+                fecha = DateTime.UtcNow,
+                type = 1,
+                kind = 3,
+                id_user = cuentaOrigen.id_user
+            };
+
+            var movimientoOrigen2 = new Movement
+            {
+                origin = cuentaOrigen.Id,
+                description = "Pago de tarjeta",
+                amount = 50.00,
+                fecha = DateTime.UtcNow,
+                type = 2,
+                kind = 4,
+                id_user = cuentaOrigen.id_user
+            };
+
+
+            var movimientoDestino1 = new Movement
+            {
+                origin = cuentaDestino.Id,
+                description = "Compra en supermercado",
+                amount = 78.50,
+                fecha = DateTime.UtcNow,
+                type = 2,
+                kind = 5,
+                id_user = cuentaDestino.id_user
+            };
+
+            var movimientoDestino2 = new Movement
+            {
+                origin = cuentaDestino.Id,
+                description = "Retiro",
+                amount = 100,
+                fecha = DateTime.UtcNow,
+                type = 2,
+                kind = 2,
+                id_user = cuentaDestino.id_user
+            };
+
+            var movimientoDestino3 = new Movement
+            {
+                origin = cuentaOrigen.Id,
+                description = "Movimiento",
                 amount = 500,
                 fecha = DateTime.UtcNow,
                 type = 2,
