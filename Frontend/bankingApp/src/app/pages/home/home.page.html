@@ -94,10 +94,15 @@
   <div class="recent-transactions">
     <div class="section-header">
       <h4 class="section-title">Transacciones recientes</h4>
+      
       <ion-button fill="clear" size="small" routerLink="/transactions">Ver todas</ion-button>
     </div>
     <ion-list lines="full">
 
+      <div *ngIf="movimientos.length === 0" class="no-transactions-message">
+        <ion-text>No hay transacciones recientes en la cuenta de la tarjeta mostrada.</ion-text>
+
+      </div>
       <ion-item *ngFor="let movimiento of movimientos">
         <ion-avatar slot="start">
           <div class="transaction-icon deposit">

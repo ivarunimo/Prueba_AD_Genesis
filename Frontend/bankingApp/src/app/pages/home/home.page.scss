@@ -24,8 +24,15 @@ ion-content {
   font-size: 14px;
   opacity: 0.8;
 }
+.no-transactions-message{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #500606;
+}
 
 .user-name {
+  font-size: 20px;
   font-weight: bold;
 }
 

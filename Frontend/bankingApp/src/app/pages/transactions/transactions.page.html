@@ -21,7 +21,7 @@
 
     <ion-list lines="full">
 
-      <ion-item *ngFor="let movimiento of movimientos">
+      <ion-item *ngFor="let movimiento of movimientos.slice().reverse()">
         <ion-avatar slot="start">
           <div class="transaction-icon deposit">
             <ion-icon *ngIf="movimiento.kind == 1" name="swap-horizontal-outline"></ion-icon>

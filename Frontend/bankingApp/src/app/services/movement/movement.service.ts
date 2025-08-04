@@ -17,7 +17,7 @@ export class MovementService {
       'Authorization': 'Bearer ' + sessionStorage.getItem('token'),
       'Content-Type': 'application/json'
     });
-    return this.http.get<Movements[]>(`${this.apiUrl}/account/${accountId}`, { headers });
+    return this.http.get<Movements[]>(`${this.apiUrl}/Account/${accountId}`, { headers });
   }
 
   getUserMovements(user_id: number): Observable<Movements[]> {
